@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🅿️ UIC Smart Parking Dashboard </title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+    <!-- <link rel="icon" href="data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 100 100\"><text y=\".9em\" font-size=\"90\">🅿️</text></svg>"> -->
+</head>
+<body>
+    <div id="app">
+        <!-- Header -->
+        <header class="header">
+            <div class="container">
+                <div class="logo">
+                    <h1>🅿️ UIC Parking Dashboard</h1>
+                    <p>Smart Management System - Web Demo</p>
+                </div>
+                <div class="header-stats">
+                    <div class="stat">
+                        <span id="total-spots">0</span>
+                        <small>Total Spots</small>
+                    </div>
+                    <div class="stat">
+                        <span id="occupancy">0%</span>
+                        <small>Occupancy</small>
+                    </div>
+                    <div class="stat">
+                        <span id="revenue">0.00</span>
+
+</xai:function_call}
+
+
+
+
+
+<xai:function_call name="edit_file">
+<parameter name="file_path" value="parking_dashboard/index.html"/>
+                        <small>Revenue</small>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="dashboard">
+            <div class="container">
+                <!-- Controls -->
+                <section class="controls">
+                    <div class="action-group">
+                        <input type="text" id="plate-input" placeholder="Enter plate (e.g. MH01AB1234)" maxlength="10">
+                        <select id="type-select">
+                            <option value="Car">🚗 Car</option>
+                            <option value="Bike">🅱️ Bike</option>
+                            <option value="Truck">🚚 Truck</option>
+                        </select>
+                        <button id="park-btn">Park Vehicle</button>
+                        <button id="exit-btn">Exit Vehicle</button>
+                    </div>
+                    <div class="search-group">
+                        <input type="text" id="search-input" placeholder="🔍 Search plate...">
+                        <button id="demo-btn">Demo Mode</button>
+                    </div>
+                </section>
+
+                <div class="grid-container">
+                    <!-- Parking Grid -->
+                    <section class="grid-section">
+                        <h2>🅿️ Parking Grid</h2>
+                        <p>S=Small/Bike 🅱️ | M=Medium/Car 🚗 | L=Large/Truck 🚚 | ██ Occupied | ⬜ Free</p>
+                        <div id="parking-grid" class="parking-grid">
+                            <!-- JS rendered -->
+                        </div>
+                    </section>
+
+                    <!-- Stats Cards -->
+                    <section class="stats-section">
+                        <div class="stat-card">
+                            <h3>Occupancy</h3>
+                            <div class="progress-bar">
+                                <div id="occupancy-bar" class="progress-fill"></div>
+                            </div>
+                            <span id="occ-percent">0%</span>
+                        </div>
+                        <div class="stat-card">
+                            <h3>Spots Available</h3>
+                            <div class="spots-pie">
+                                <canvas id="spots-canvas" width="120" height="120"></canvas>
+                            </div>
+                            <div id="spots-summary"></div>
+                        </div>
+                        <div class="stat-card">
+                            <h3>Revenue</h3>
+                            <canvas id="revenue-chart" width="200" height="100"></canvas>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Parked Vehicles -->
+                <section class="table-section">
+                    <h2>Currently Parked Vehicles <small id="parked-count">(0)</small></h2>
+                    <div class="table-container">
+                        <table id="parked-table">
+                            <thead>
+                                <tr>
+                                    <th>Plate</th>
+                                    <th>Type</th>
+                                    <th>Spot</th>
+                                    <th>Entry</th>
+                                    <th>Duration</th>
+                                    <th>Est. Fee</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- JS rendered -->
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- Recent Activity -->
+                <section class="activity-section">
+                    <h2>📋 Recent Activity</h2>
+                    <div id="activity-log">
+                        <p>No activity yet...</p>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <p>&amp;copy; 2024 UIC Parking System | Powered by HTML/CSS/JS | Demo for Teacher</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
